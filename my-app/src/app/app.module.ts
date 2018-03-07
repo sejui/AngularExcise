@@ -8,8 +8,9 @@ import { ApplicationComponent } from './application/application.component';
 import { AppRoutingModule } from './/app-routing.module';
 import {RouterModule, Routes} from '@angular/router';
 
+/* setting constant for router, link path with the component. */
 const appRoutes: Routes = [
-  { path: '', component: AppComponent },
+  { path: '', component: IntroductionComponent },
   { path: 'introduction', component: IntroductionComponent },
   { path: 'application', component: ApplicationComponent },
 ];
@@ -23,7 +24,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes) /* call the router constant here */
   ],
   providers: [],
   bootstrap: [AppComponent]

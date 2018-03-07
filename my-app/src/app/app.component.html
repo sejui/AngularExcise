@@ -1,15 +1,18 @@
-<!--The content below is only a placeholder and can be replaced.-->
+
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
 </div>
 <nav>
-  <a href="#">introduction</a>
-  <a href="#">practice</a>
+  <!-- use routerLink directive to call the path that set in app.module -->
+  <!-- use routerLinkActive to assign css class when router link is activated -->
+  <li routerLinkActive="active"><a routerLink="/introduction">introduction</a></li>
+  <li routerLinkActive="active"><a routerLink="/application">application</a></li>
 </nav>
 
 <div>
+  <!-- this displays routed components -->
   <router-outlet></router-outlet>
 </div>
 
