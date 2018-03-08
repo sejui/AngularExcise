@@ -1,9 +1,11 @@
 <p>
-  post works!
+  post component works properly
 </p>
 <ul>
+  <!-- use ngFor to create a list of post objects from _posts -->
   <li *ngFor="let post of _posts">
     <h3>{{post.title}}</h3>
+    <p>{{post.id}}</p>
     <p>{{post.body}}</p>
   </li>
 </ul>
