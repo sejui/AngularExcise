@@ -9,6 +9,8 @@ import { AppRoutingModule } from './/app-routing.module';
 import {RouterModule, Routes} from '@angular/router';
 import {HttpModule} from '@angular/http';
 import { PostComponent } from './post/post.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { FormsModule} from '@angular/forms';
 
 /* setting constant for router, link path with the component. */
 const appRoutes: Routes = [
@@ -27,8 +29,9 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes), /* register the router constant here */
-    HttpModule /*register http service*/
+    HttpClientModule /*register http service*/
   ],
   providers: [],
   bootstrap: [AppComponent]

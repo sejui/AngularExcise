@@ -5,7 +5,20 @@
   <!-- use ngFor to create a list of post objects from _posts -->
   <li *ngFor="let post of _posts">
     <h3>{{post.title}}</h3>
-    <p>{{post.id}}</p>
+    <span>{{post.id}}</span>
+    <button (click)="updateClicked(post)">update</button>
+    <button (click)="delete(post)">delete</button>
+    <p>{{errorMsg}}</p>
+
+    <div *ngIf="post.updateClicked">
+
+      <form>
+        <input placeholder="update content" [(ngModel)]="post.title" name="title">
+        <button type="submit" (click)="updateSubmit(post)">confirm</button>
+      </form>
+
+    </div>
+
     <p>{{post.body}}</p>
   </li>
 </ul>
